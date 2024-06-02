@@ -1,0 +1,7 @@
+{
+  "name": "listadoPelis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
