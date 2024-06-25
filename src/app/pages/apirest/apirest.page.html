@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Archivo Cinematico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Listado de Películas</ion-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let movie of movies">
+            <ion-card (click)="verDetalle(movie.id)" class="custom-card">
+              <img [src]="movie.img" alt="Imagen de {{ movie.title }}" class="custom-img">
+              <ion-card-header>
+                <ion-card-title>{{ movie.title }}</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

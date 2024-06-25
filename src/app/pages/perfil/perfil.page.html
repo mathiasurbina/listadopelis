@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del Usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nombre de Usuario:</ion-label>
+        <ion-text>{{ user.nombreUsuario }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Correo Electrónico:</ion-label>
+        <ion-text>{{ user.email }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Películas Valoradas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let pelicula of user.peliculasValoradas">
+          <ion-label>
+            <h2>{{ pelicula.titulo }}</h2>
+            <p>{{ pelicula.rating }} estrellas</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

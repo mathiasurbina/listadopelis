@@ -25,3 +25,31 @@
 #container a {
   text-decoration: none;
 }
+
+ion-card {
+  width: 120px; 
+  height: 250px; 
+}
+
+ion-card-header ion-card-title {
+  font-size: 0.6rem; 
+  align-self: center;
+}
+
+ion-card-header ion-card-subtitle {
+  font-size: 0.7rem;
+}
+
+.star-icons {
+  display: flex;
+  height: 80px;
+  width: 80px;
+  align-self: center;
+}
+
+.imagen-pelicula {
+  height: 130px;
+  width: 110px;
+  align-self: center;
+  right: 40px;
+}

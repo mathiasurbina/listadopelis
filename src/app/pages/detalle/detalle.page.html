@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Archivo Cinematico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngIf="movie" class="center-content">
+    <img [src]="movie.img" alt="Imagen de {{ movie.title }}" class="custom-img">
+    <ion-card-header>
+      <ion-card-title>{{ movie.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ movie.descripcion }}</p>
+      <ion-button expand="block" (click)="shareMovie()">Compartir Película</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
